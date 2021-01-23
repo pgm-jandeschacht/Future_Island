@@ -4,8 +4,8 @@
   font-family: arial;
 }
 
-body {
-  overflow-x: hidden;
+li {
+  list-style: none;
 }
 
 header {
@@ -101,4 +101,17 @@ footer h2 {
 
 .soclink a{
   text-decoration: underline;
+}
+
+.line-up {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.line-up__list {
+  width: 33%;
+}
+
+.line-up__list img {
+  max-width: 100%;
 }

@@ -24,7 +24,8 @@
       this.$concert = document.querySelectorAll('.line-up__container');
       this.$concert.forEach(concert => {
         concert.addEventListener('click', (ev) => {
-          let id = ev.target.dataset.id || ev.target.parentNode.dataset.id;
+          let id = ev.target.dataset.id || ev.target.parentNode.dataset.id || ev.target.parentNode.parentNode.id;
+          console.log(id)
           this.generateHTMLForDetails(id);
         });
       });
@@ -40,10 +41,12 @@
 
     // Generate Socials
     generateHTMLForSocial() {
-      let tempStr = '<h2>Social</h2><ul>';
+      let tempStr = '<ul>';
         tempStr +=
         social.map((soc) => {
-          return `<li class="playlist"><a href="${soc.link}" target="_blank" rel="noopener noreferrer">${soc.type}</a></li>`
+          return `<li class="playlist">
+                    <a href="${soc.link}" target="_blank" rel="noopener noreferrer">${soc.type}</a>
+                  </li>`
         }).join('');
         tempStr += '</ul>';
       return tempStr;
@@ -54,7 +57,12 @@
       let tempStr = '';
         tempStr += 
         lineUp.map((lin) => {
-          return `<div data-id="${lin.id}" class="line-up__container"><p class="line-up__day">${this.findWeekday(lin.from)}</p><p>${lin.place.name}</p><img src="${lin.artist.picture.small}"><h2>${lin.artist.name}</h2></div>`
+          return `<li data-id="${lin.id}" class="line-up__list">
+                    <p class="line-up__day">${this.findWeekday(lin.from)}</p>
+                    <p>${lin.place.name}</p>
+                    <img src="${lin.artist.picture.small}">
+                    <h2>${lin.artist.name}</h2>
+                  </li>`
         }).join('');
       return tempStr;
     },
