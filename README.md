@@ -1,5 +1,5 @@
-# Final Project pgm-1: Future Island
-Final Project PGM-1 2020-21 | Associate Degree in Computer Programming | Artevelde University of Applied Sciences
+# Final Project Pgm-1: Future Island
+Final Project Pgm-1 2020-21 | Associate Degree in Computer Programming | Artevelde University of Applied Sciences
 
 |           |                                  |
 | --------- | -------------------------------- |
