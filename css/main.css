@@ -106,12 +106,21 @@ footer h2 {
 .line-up {
   display: flex;
   flex-wrap: wrap;
+  padding: 0.5rem;
 }
 
 .line-up__list {
-  width: 33%;
+  width: calc(33% - 1rem);
+  padding: 0.5rem;
+}
+
+.line-up__img {
+  padding-bottom: 66.7%;
+  position: relative;
+  overflow: hidden;
 }
 
 .line-up__list img {
   max-width: 100%;
+  position: absolute;
 }

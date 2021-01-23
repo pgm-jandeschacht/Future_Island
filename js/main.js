@@ -58,10 +58,14 @@
         tempStr += 
         lineUp.map((lin) => {
           return `<li data-id="${lin.id}" class="line-up__list">
-                    <p class="line-up__day">${this.findWeekday(lin.from)}</p>
-                    <p>${lin.place.name}</p>
-                    <img src="${lin.artist.picture.small}">
-                    <h2>${lin.artist.name}</h2>
+                    <a href="">
+                      <p class="line-up__day">${this.findWeekday(lin.from)}</p>
+                      <p>${lin.place.name}</p>
+                      <div class="line-up__img">
+                        <img src="${lin.artist.picture.small}">
+                      </div>
+                      <h2>${lin.artist.name}</h2>
+                    </a>
                   </li>`
         }).join('');
       return tempStr;
