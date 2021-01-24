@@ -51,14 +51,14 @@ a {
   list-style: none;
   font-size: 1.4rem;
   font-weight: bold;
-  width: 7rem;
   text-align: center;
-  padding: 1rem;
+  margin-right: 0.5rem;
+  text-transform: uppercase;
 }
 
 .nav li:last-of-type {
-  padding: 0.5rem;
   background-color: #222;
+  padding: 0.5rem;
 }
 
 .nav li:hover a {
@@ -115,12 +115,23 @@ footer h2 {
 }
 
 .line-up__img {
-  padding-bottom: 66.7%;
-  position: relative;
+  padding-bottom: calc(214.812 / 322.219 * 100%);
+  width: 100%;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
-.line-up__list img {
-  max-width: 100%;
+.line-up__img img {
+  object-fit: contain;
+  width: 100%;
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.4s ease-in-out;
+}
+
+.line-up__list a {
+  color: #000;
 }
