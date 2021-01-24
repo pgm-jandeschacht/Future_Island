@@ -92,12 +92,12 @@ a {
 }
 
 .nav li:last-of-type {
-  background-color: #222;
-  padding: 0.3rem 0.5rem;
+  background-color: #050505;
+  padding: 0.4rem 0.8rem;
 }
 
 .nav li:hover a {
-  color: #222
+  color: #050505;
 }
 
 .nav li:last-of-type:hover {
