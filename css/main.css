@@ -1,7 +1,23 @@
+@font-face {
+  font-family: 'calibre';
+  src: url('../fonts/calibre/Calibre-Regular.woff2') format('woff2'),
+       url('../fonts/calibre/Calibre-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'rift';
+  src: url('../fonts/rift/fort_foundry_-_rift-bold-webfont.woff2') format('woff2'),
+       url('../fonts/rift/fort_foundry_-_rift-bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
-  font-family: arial;
+  font-family: 'calibre';
 }
 
 li {
@@ -15,17 +31,31 @@ header {
   background-size: cover;
 }
 
-.nav {
+.header__container {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem;
+  padding: 1.6rem;
 }
 
-.nav h1 {
+.title {
   width: 20rem;
-  font-size: 3rem;
+  font-size: 3.2rem;
+  line-height: 0;
+  width: 15rem;
+}
+
+.title a {
+  color: #fff;
+  font-family: 'rift';
+  text-transform: uppercase;
+  line-height: 0.8;
+}
+
+.blue {
+  font-family: 'rift';
+  color: #13f5f2
+  ;
 }
 
 .nav a {
@@ -34,31 +64,36 @@ header {
 
 .navigation {
   background-image: linear-gradient(270deg, #ffa29c 5.19%, #643cfa 100%);
-  padding: 1rem;
+  padding: 0.5rem;
   display: flex;
-  margin-left: 3rem;
   flex-wrap: wrap;
-  flex-direction: row;
-  width: 50rem;
-  align-items: center;
 }
 
 a {
   text-decoration: none;
 }
 
-.nav li {
+.nav__list__item {
   list-style: none;
   font-size: 1.4rem;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
-  margin-right: 0.5rem;
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.nav__list__item a {
+  font-family: 'rift';
+  flex-grow: 1;
 }
 
 .nav li:last-of-type {
   background-color: #222;
-  padding: 0.5rem;
+  padding: 0.3rem 0.5rem;
 }
 
 .nav li:hover a {
@@ -75,7 +110,7 @@ a {
   color: #fff;
   font-weight: bold;
   font-size: 3rem;
-padding: 1rem;
+  padding: 1rem;
 }
 
 footer {

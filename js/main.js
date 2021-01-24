@@ -78,7 +78,7 @@
 
     // Generate navigation
     generateHTMLForNav() {
-      let tempStr = '<h1><a href="#">1-4 July Festivalpark Werchter Belgium</a></h1><ul class="navigation">';
+      let tempStr = '<ul class="navigation">';
         tempStr +=
         mainNav.map((nav) => {
 
@@ -90,7 +90,9 @@
             }
           }
 
-          return `<li><a href="${nav.link}" target="${externalOrInternal ()}" rel="noopener noreferrer">${nav.name}</a></li>`
+          return `<li class="nav__list__item">
+                    <a href="${nav.link}" target="${externalOrInternal ()}" rel="noopener noreferrer">${nav.name}</a>
+                  </li>`
         }).join('');
         tempStr += '</ul>';
       return tempStr;
